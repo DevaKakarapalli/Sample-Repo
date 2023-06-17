@@ -1,0 +1,52 @@
+git fetch&&git checkout yourbranch
+git status
+git add -A
+git status
+git commit -m "commit message"
+git checkout INTBranch
+git pull origin INTBranch
+git checkout yourbranch
+git merge INTBranch
+git push origin yourbranch
+
+git config --global user.name ""
+git config --global user.email ""
+
+git fetch && git checkout LCT2-
+git tag | xargs -n 1 -I% git tag -d %
+git status
+git add -A
+git status
+git commit -m "LCT2- "
+git checkout AIZCSRINT
+git pull origin AIZCSRINT
+git checkout LCT2-
+git merge AIZCSRINT
+git push origin LCT2-
+
+ 
+
+For update the commit message
+git commit --amend -m "<Jira key message>"
+
+ 
+
+
+(Conflict bw INT branch and Dev branch in PR)
+1. Copy conflicted file from INT branch and paste in vs code.
+2. git add -A
+3. git commit -m <message>
+4. git push origin <Dev branch>
+5. Make sure conflicts resolved in PR.
+6. git checkout <INT branch>
+7. git pull origin <INT branch>
+8. git checkout <Dev branch>
+9. git merge <INT branch>
+10.Add your code changes. 
+11.git add -A
+12.git commit -m "<Jira key message>"
+13.git checkout <INT branch>
+14.git pull origin <INT branch>
+15.git checkout <Dev branch>
+16.git merge <INT branch>
+17.git push origin <Dev branch>
